@@ -1,0 +1,11 @@
+services:
+  bug-tracker:
+    build: .
+    ports:
+      - "8002:8000"
+    volumes:
+      - bug_db:/app/bugs.db
+    restart: unless-stopped
+
+volumes:
+  bug_db:
