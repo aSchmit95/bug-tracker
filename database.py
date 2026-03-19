@@ -1,7 +1,8 @@
+import os
 import sqlite3
 from contextlib import contextmanager
 
-DB_PATH = "bugs.db"
+DB_PATH = os.getenv("DB_PATH", "bugs.db")
 
 
 def init_db():

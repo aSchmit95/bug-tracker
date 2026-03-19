@@ -4,7 +4,9 @@ services:
     ports:
       - "8002:8000"
     volumes:
-      - bug_db:/app/bugs.db
+      - bug_db:/app/data
+    environment:
+      - DB_PATH=/app/data/bugs.db
     restart: unless-stopped
 
 volumes:
